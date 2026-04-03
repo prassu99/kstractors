@@ -1,6 +1,9 @@
 # Cloudflare Pages (Git-connected project)
 #
 # In the Cloudflare dashboard → your Pages project → Settings → Builds:
+#   Root directory:   (EMPTY — this repo’s package.json is at the repo root.
+#                      If you see "root directory not found", you pointed at a
+#                      folder that doesn’t exist in Git.)
 #   Build command:    npm run build
 #   Build output:     dist
 #   Deploy command:   (leave EMPTY — do not use "npx wrangler deploy")
