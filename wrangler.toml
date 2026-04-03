@@ -1,0 +1,4 @@
+# Cloudflare Pages — connect repo or run: npx wrangler pages deploy dist
+name = "kstractors"
+compatibility_date = "2025-04-01"
+pages_build_output_dir = "dist"
