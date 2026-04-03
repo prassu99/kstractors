@@ -52,7 +52,7 @@ export function Contact() {
           
         </div>
         <p className="mb-2 mt-8 text-xs font-bold uppercase tracking-wider text-base-content/50">
-          Contact us on social media
+          Contact us on social media 
         </p>
         <SocialIcons />
         
