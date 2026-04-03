@@ -1,4 +1,16 @@
-# Cloudflare Pages — connect repo or run: npx wrangler pages deploy dist
+# Cloudflare Pages (Git-connected project)
+#
+# In the Cloudflare dashboard → your Pages project → Settings → Builds:
+#   Build command:    npm run build
+#   Build output:     dist
+#   Deploy command:   (leave EMPTY — do not use "npx wrangler deploy")
+#
+# Pages uploads the "dist" folder automatically after a successful build.
+# "wrangler deploy" is for Workers only and will fail here.
+#
+# Optional CLI upload (not used by default Git flow):
+#   npx wrangler pages deploy dist --project-name=YOUR_PROJECT_NAME
+
 name = "kstractors"
 compatibility_date = "2025-04-01"
 pages_build_output_dir = "dist"
