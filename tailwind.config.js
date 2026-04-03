@@ -6,7 +6,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['"Source Sans 3"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        /** Poppins — clean retail sans common on Mahindra digital properties */
+        sans: ['Poppins', 'ui-sans-serif', 'system-ui', 'sans-serif'],
       },
     },
   },
@@ -14,23 +15,24 @@ export default {
   daisyui: {
     themes: [
       {
+        /** Dark retail shell: light text + Mahindra red — white logo assets stay readable */
         tractors: {
-          primary: '#2d5a3d',
-          'primary-content': '#f5faf6',
-          secondary: '#b45309',
-          'secondary-content': '#fffbeb',
+          primary: '#e31837',
+          'primary-content': '#ffffff',
+          secondary: '#f5f5f5',
+          'secondary-content': '#171717',
           accent: '#128c7e',
           'accent-content': '#ffffff',
-          neutral: '#292524',
-          'neutral-content': '#e7e5e4',
-          'base-100': '#faf8f5',
-          'base-200': '#f0ebe3',
-          'base-300': '#ddd5c9',
-          'base-content': '#1c1917',
-          info: '#1d4ed8',
-          success: '#166534',
-          warning: '#b45309',
-          error: '#b91c1c',
+          neutral: '#0a0a0a',
+          'neutral-content': '#e5e5e5',
+          'base-100': '#161616',
+          'base-200': '#1f1f1f',
+          'base-300': '#2e2e2e',
+          'base-content': '#ececec',
+          info: '#38bdf8',
+          success: '#22c55e',
+          warning: '#f59e0b',
+          error: '#ef4444',
         },
       },
     ],

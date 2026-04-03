@@ -1,47 +1,45 @@
 export type TractorModel = {
   id: string
   name: string
-  hp: string
-  use: string
-  highlights: string[]
   image: string
+  officialUrl: string
 }
 
+/** Names and imagery from Mahindra Tractors India; links go to official family pages. */
 export const tractorModels: TractorModel[] = [
   {
-    id: 'ks-45',
-    name: 'KS Compact 45',
-    hp: '45 HP',
-    use: 'Vineyards, small holdings, loader work',
-    highlights: ['Hydrostatic option', 'ROPS / cab', '3-point & PTO'],
+    id: 'jivo',
+    name: 'Mahindra JIVO',
     image:
-      'https://images.unsplash.com/photo-1625246333195-78d9c38ad449?w=800&q=80',
+      'https://www.mahindratractor.com/sites/default/files/2023-11/jivo_new_brand_img_0.webp',
+    officialUrl: 'https://www.mahindratractor.com/tractors/jivo-tractors',
   },
   {
-    id: 'ks-75',
-    name: 'KS FieldPro 75',
-    hp: '75 HP',
-    use: 'Mixed farming, baling, medium implements',
-    highlights: ['16F/16R transmission', 'High-flow hydraulics'],
+    id: 'oja',
+    name: 'Mahindra OJA',
     image:
-      'https://images.unsplash.com/photo-1592982537447-7440770cbfc1?w=800&q=80',
+      'https://www.mahindratractor.com/sites/default/files/styles/customwebp/public/2023-11/proja.webp',
+    officialUrl: 'https://www.mahindratractor.com/tractors/oja-tractors',
   },
   {
-    id: 'ks-110',
-    name: 'KS Titan 110',
-    hp: '110 HP',
-    use: 'Row crop, heavy tillage, large balers',
-    highlights: ['Cab climate control', 'ISOBUS ready'],
+    id: 'xp-plus',
+    name: 'Mahindra XP PLUS',
     image:
-      'https://images.unsplash.com/photo-1500937386664-56d1dfef3854?w=800&q=80',
+      'https://www.mahindratractor.com/sites/default/files/2023-11/xp__new_brand_img_0.webp',
+    officialUrl: 'https://www.mahindratractor.com/tractors/xp-tractors',
   },
   {
-    id: 'ks-140',
-    name: 'KS Titan 140',
-    hp: '140 HP',
-    use: 'Primary tillage, planters, sprayers',
-    highlights: ['Front linkage option', '50 km/h transport'],
+    id: 'arjun',
+    name: 'Mahindra ARJUN',
     image:
-      'https://images.unsplash.com/photo-1464226184884-fa280b87c399?w=800&q=80',
+      'https://www.mahindratractor.com/sites/default/files/2023-11/arjun_new_brand_img_0.webp',
+    officialUrl: 'https://www.mahindratractor.com/tractors/arjun-tractors',
+  },
+  {
+    id: 'novo',
+    name: 'Mahindra NOVO',
+    image:
+      'https://www.mahindratractor.com/sites/default/files/2023-11/novo_new_brand_img_0.webp',
+    officialUrl: 'https://www.mahindratractor.com/tractors/novo-tractors',
   },
 ]
