@@ -1,4 +1,3 @@
-/** Replace with your real business details */
 export const site = {
   name: 'Mahindra Tractors - KS Tractors and Implements',
   /** Facebook page title @see https://www.facebook.com/profile.php?id=61575473500655 */
@@ -12,7 +11,7 @@ export const site = {
   /** Prefilled text when opening WhatsApp from site buttons (edit once, used everywhere). */
   whatsappPrefillDefault:
     'Hi, I’m messaging from your website — I’d like to speak with KS Tractors Jangaon about Mahindra tractors / service / parts.',
-  email: 'sales@kstractors.example',
+  email: 'kstractors2025@gmail.com',
   addressLines: [
     '3-77/1, Suryapet Rd, near Bharat Petrol Pump',
     'Jangaon, Telangana 506167, India',
