@@ -1,5 +1,6 @@
 import { GallerySlideshow } from '../components/GallerySlideshow'
 import { Seo } from '../components/Seo'
+import { WhatsAppPageFooter } from '../components/WhatsAppPageFooter'
 import { TITLE_SUFFIX } from '../config/seo'
 import { site } from '../config/site'
 
@@ -26,6 +27,7 @@ export function Gallery() {
       </p>
 
       <GallerySlideshow />
+      <WhatsAppPageFooter />
     </div>
   )
 }

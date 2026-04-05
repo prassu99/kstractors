@@ -1,37 +1,10 @@
-import { useState, type FormEvent } from 'react'
 import { Seo } from '../components/Seo'
+import { WhatsAppCta } from '../components/WhatsAppCta'
 import { TITLE_SUFFIX } from '../config/seo'
-import { site, whatsappUrl } from '../config/site'
+import { site } from '../config/site'
 import { SocialIcons } from '../components/SocialIcons'
 
-const interests = [
-  'New tractor',
-  'Used tractor',
-  'Trade-in / appraisal',
-  'Service appointment',
-  'Parts quote',
-  'Other',
-] as const
-
 export function Contact() {
-  const [name, setName] = useState('')
-  const [phone, setPhone] = useState('')
-  const [interest, setInterest] = useState<string>(interests[0])
-  const [message, setMessage] = useState('')
-
-  function handleSubmit(e: FormEvent) {
-    e.preventDefault()
-    const lines = [
-      site.facebookPageTitle,
-      `Name: ${name || '(not provided)'}`,
-      `Phone: ${phone || '(not provided)'}`,
-      `Interest: ${interest}`,
-      message.trim() ? `Message: ${message.trim()}` : '',
-    ].filter(Boolean)
-    const url = whatsappUrl(lines.join('\n'))
-    window.open(url, '_blank', 'noopener,noreferrer')
-  }
-
   return (
     <>
       <Seo
@@ -49,6 +22,7 @@ export function Contact() {
               <a href={`tel:${site.phoneTel}`} className="link link-primary font-medium">
                 {site.phoneDisplay}
               </a>
+              <span className="text-base-content/50"> · Call or WhatsApp</span>
             </p>
             <p>
               <a href={`mailto:${site.email}`} className="link link-primary font-medium">
@@ -64,69 +38,15 @@ export function Contact() {
           <SocialIcons />
         </div>
 
-        <form
-          className="card border border-base-300 bg-base-200 p-6 shadow-xl md:p-8"
-          onSubmit={handleSubmit}
-        >
-          <h2 className="mb-6 text-xl font-bold text-base-content">WhatsApp</h2>
-          <label className="form-control mb-4 w-full">
-            <span className="label">
-              <span className="label-text font-semibold text-base-content">Name</span>
-            </span>
-            <input
-              type="text"
-              className="input input-bordered w-full border-base-300 bg-base-300/40 text-base-content"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              autoComplete="name"
-            />
-          </label>
-          <label className="form-control mb-4 w-full">
-            <span className="label">
-              <span className="label-text font-semibold text-base-content">Phone</span>
-            </span>
-            <input
-              type="tel"
-              className="input input-bordered w-full border-base-300 bg-base-300/40 text-base-content"
-              value={phone}
-              onChange={(e) => setPhone(e.target.value)}
-              autoComplete="tel"
-            />
-          </label>
-          <label className="form-control mb-4 w-full">
-            <span className="label">
-              <span className="label-text font-semibold text-base-content">Interest</span>
-            </span>
-            <select
-              className="select select-bordered w-full border-base-300 bg-base-300/40 text-base-content"
-              value={interest}
-              onChange={(e) => setInterest(e.target.value)}
-            >
-              {interests.map((opt) => (
-                <option key={opt} value={opt}>
-                  {opt}
-                </option>
-              ))}
-            </select>
-          </label>
-          <label className="form-control mb-6 w-full">
-            <span className="label">
-              <span className="label-text font-semibold text-base-content">Message</span>
-            </span>
-            <textarea
-              className="textarea textarea-bordered min-h-28 w-full border-base-300 bg-base-300/40 text-base-content"
-              value={message}
-              onChange={(e) => setMessage(e.target.value)}
-              rows={4}
-            />
-          </label>
-          <button
-            type="submit"
-            className="btn w-full border-0 bg-[#128c7e] text-white hover:bg-[#0f7569]"
-          >
-            WhatsApp
-          </button>
-        </form>
+        <div className="card border border-base-300 bg-base-200 p-6 shadow-xl md:p-8">
+          <h2 className="mb-2 text-xl font-bold text-base-content">WhatsApp</h2>
+          <p className="mb-6 text-sm leading-relaxed text-base-content/75">
+            Tap below to open WhatsApp and start a chat with our business account — no need to forward or share
+            with someone else; you&apos;ll message us directly.
+          </p>
+          <WhatsAppCta variant="card" label="Chat on WhatsApp" />
+          <p className="mt-4 text-center text-xs text-base-content/50">{site.phoneDisplay}</p>
+        </div>
       </div>
     </>
   )

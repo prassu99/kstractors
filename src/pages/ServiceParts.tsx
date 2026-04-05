@@ -1,4 +1,5 @@
 import { Seo } from '../components/Seo'
+import { WhatsAppPageFooter } from '../components/WhatsAppPageFooter'
 import { TITLE_SUFFIX } from '../config/seo'
 import { mahindraIndia } from '../config/mahindra'
 import { mahindraOfficialCopy as c } from '../content/mahindraOfficialCopy'
@@ -50,6 +51,7 @@ export function ServiceParts() {
       </section>
 
       <p className="text-xs leading-relaxed text-base-content/55">{c.disclaimer}</p>
+      <WhatsAppPageFooter />
     </div>
   )
 }

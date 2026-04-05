@@ -1,4 +1,5 @@
 import { Seo } from '../components/Seo'
+import { WhatsAppPageFooter } from '../components/WhatsAppPageFooter'
 import { TITLE_SUFFIX } from '../config/seo'
 import { mahindraIndia } from '../config/mahindra'
 import { tractorModels } from '../data/models'
@@ -71,6 +72,7 @@ export function Models() {
           </li>
         ))}
       </ul>
+      <WhatsAppPageFooter />
     </div>
   )
 }

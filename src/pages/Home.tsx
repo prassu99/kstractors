@@ -1,6 +1,7 @@
 import homeHero from '../assets/home.png'
 import { MahindraOfficialSections } from '../components/MahindraOfficialSections'
 import { Seo } from '../components/Seo'
+import { WhatsAppCta } from '../components/WhatsAppCta'
 import { mahindraIndia } from '../config/mahindra'
 import { defaultMeta } from '../config/seo'
 import { site } from '../config/site'
@@ -18,17 +19,23 @@ export function Home() {
           Implements is your authorized Mahindra dealer on Suryapet Road — new tractors, service, and genuine parts
           for Jangaon and nearby areas.
         </p>
-        <p className="text-sm text-base-content/60">
-          Models, implements &amp; prices:{' '}
-          <a
-            href={mahindraIndia.website}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="link link-primary font-semibold"
-          >
-            MahindraTractor.com
-          </a>
-        </p>
+        <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row sm:flex-wrap">
+          <WhatsAppCta variant="hero" label="Chat on WhatsApp" />
+          <span className="hidden text-base-content/35 sm:inline" aria-hidden>
+            ·
+          </span>
+          <p className="mb-0 text-center text-sm text-base-content/60 sm:text-left">
+            Models, implements &amp; prices:{' '}
+            <a
+              href={mahindraIndia.website}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="link link-primary font-semibold"
+            >
+              MahindraTractor.com
+            </a>
+          </p>
+        </div>
       </div>
 
       <MahindraOfficialSections heroSrc={homeHero} />
