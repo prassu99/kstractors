@@ -1,9 +1,16 @@
+import { Seo } from '../components/Seo'
+import { TITLE_SUFFIX } from '../config/seo'
 import { mahindraIndia } from '../config/mahindra'
 import { mahindraOfficialCopy as c } from '../content/mahindraOfficialCopy'
 
 export function ServiceParts() {
   return (
     <div className="mx-auto max-w-3xl space-y-10">
+      <Seo
+        title={`Tractor Service & Implements | ${TITLE_SUFFIX}`}
+        description="Mahindra tractor service and genuine implements near Jangaon. KS Tractors dealership connects you to the national service network and official implements hub on MahindraTractor.com."
+        path="/service-parts"
+      />
       <h1 className="text-3xl font-bold tracking-tight text-base-content md:text-4xl">
         Service &amp; implements
       </h1>

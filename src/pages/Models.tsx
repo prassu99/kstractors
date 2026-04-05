@@ -1,9 +1,16 @@
+import { Seo } from '../components/Seo'
+import { TITLE_SUFFIX } from '../config/seo'
 import { mahindraIndia } from '../config/mahindra'
 import { tractorModels } from '../data/models'
 
 export function Models() {
   return (
     <div>
+      <Seo
+        title={`Mahindra Tractor Models in Jangaon | ${TITLE_SUFFIX}`}
+        description="Mahindra tractors in Jangaon: explore the lineup at KS Tractors — specs, compare models, and enquire on MahindraTractor.com. Your authorized tractor dealer on Suryapet Road."
+        path="/models"
+      />
       <h1 className="mb-6 text-3xl font-bold tracking-tight text-base-content md:text-4xl">
         TRACTORS
       </h1>

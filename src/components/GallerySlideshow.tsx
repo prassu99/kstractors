@@ -38,7 +38,11 @@ export function GallerySlideshow() {
 
   const count = images.length
   const safeIndex = count ? index % count : 0
-  const currentSrc = count ? `/gallery/${images[safeIndex]}` : ''
+  const currentFile = count ? images[safeIndex] : ''
+  const currentSrc = currentFile ? `/gallery/${currentFile}` : ''
+  const slideAlt = currentFile
+    ? `${currentFile.replace(/\.[^.]+$/, '').replace(/-/g, ' ')} — Mahindra tractors, KS Tractors and Implements dealership, Jangaon`
+    : ''
 
   useEffect(() => {
     if (reduceMotion) {
@@ -133,7 +137,7 @@ export function GallerySlideshow() {
 
         <img
           src={currentSrc}
-          alt=""
+          alt={slideAlt}
           className="max-h-[min(70vh,560px)] w-full object-contain object-center"
           style={{
             opacity: reduceMotion ? 1 : imgOpacity,

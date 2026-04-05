@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { NavLink, Outlet } from 'react-router-dom'
 import { mahindraIndia } from '../config/mahindra'
 import { site } from '../config/site'
+import { BreadcrumbJsonLd } from './BreadcrumbJsonLd'
+import { JsonLd } from './JsonLd'
 import { SocialIcons } from './SocialIcons'
 import { WhatsAppFloat } from './WhatsAppFloat'
 
@@ -20,6 +22,8 @@ export function Layout() {
 
   return (
     <div className="flex min-h-screen flex-col bg-base-100">
+      <JsonLd />
+      <BreadcrumbJsonLd />
       <a
         href={mahindraIndia.website}
         target="_blank"
