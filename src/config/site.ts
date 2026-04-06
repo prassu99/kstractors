@@ -13,7 +13,7 @@ export const site = {
     'Hi, I’m messaging from your website — I’d like to speak with KS Tractors Jangaon about Mahindra tractors / service / parts.',
   email: 'kstractors2025@gmail.com',
   addressLines: [
-    '3-77/1, Suryapet Rd, near Bharat Petrol Pump',
+    '3-77/1, Suryapet Road, near Bharat Petrol Pump',
     'Jangaon, Telangana 506167, India',
   ],
   hours: 'Mon–Sat 8:00–18:00 · Sun closed',
