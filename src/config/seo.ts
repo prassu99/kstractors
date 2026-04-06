@@ -8,7 +8,7 @@ export const SITE_URL = (raw?.replace(/\/$/, '').trim() || 'https://kstractorsma
 /** Homepage and absolute links — trailing slash matches sitemap & Google preferred home URL */
 export const SITE_HOME_URL = `${SITE_URL}/`
 
-export const DEFAULT_OG_IMAGE = `${SITE_URL}/favicon.svg`
+export const DEFAULT_OG_IMAGE = `${SITE_URL}/favicon.png`
 export const DEFAULT_OG_IMAGE_ALT =
   'KS Tractors and Implements — authorized Mahindra tractor dealer and showroom, Jangaon, Telangana'
 

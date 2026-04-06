@@ -31,7 +31,7 @@ export function JsonLd() {
         ],
         description: LOCAL_BUSINESS_SEO_DESCRIPTION,
         url: SITE_HOME_URL,
-        image: `${SITE_URL}/favicon.svg`,
+        image: `${SITE_URL}/favicon.png`,
         ...(site.phoneTel ? { telephone: site.phoneTel } : {}),
         address: {
           '@type': 'PostalAddress',
